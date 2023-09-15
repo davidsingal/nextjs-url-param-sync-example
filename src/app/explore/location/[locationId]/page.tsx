@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Widget from '@/components/widget';
 
 import type { NextPage } from 'next';
 
@@ -27,9 +28,7 @@ const Explore: ExploreProps = ({ params, searchParams }) => {
       <h1>Location {locationId}</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit. Blanditiis animi reprehenderit reiciendis voluptatem vero iure.</p>
     
-      <p>Your current location:</p>
-      <p>Longitude: {longitude}</p>
-      <p>Latitude: {latitude}</p>
+      <Widget {...{ latitude: +latitude, longitude: +longitude }} />
     </div>
   )
 }
