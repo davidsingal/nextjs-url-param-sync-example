@@ -18,8 +18,12 @@ const MapComponent: FC = () => {
   const router = useRouter();
 
   const [viewState, setViewState] = useState<ExplicitViewState>({
-    longitude: searchParams.get('longitude') ? Number(searchParams.get('longitude')) : DEFAULT_VIEWPORT.longitude,
-    latitude: searchParams.get('latitude') ? Number(searchParams.get('latitude')) : DEFAULT_VIEWPORT.latitude,
+    longitude: searchParams.get('longitude')
+      ? Number(searchParams.get('longitude'))
+      : DEFAULT_VIEWPORT.longitude,
+    latitude: searchParams.get('latitude')
+      ? Number(searchParams.get('latitude'))
+      : DEFAULT_VIEWPORT.latitude,
     zoom: searchParams.get('zoom') ? Number(searchParams.get('zoom')) : DEFAULT_VIEWPORT.zoom,
   });
 
@@ -47,7 +51,7 @@ const MapComponent: FC = () => {
    */
   useEffect(() => {
     handleUpdateUrl();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

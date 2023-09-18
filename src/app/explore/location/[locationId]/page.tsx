@@ -13,7 +13,7 @@ type ExploreSearchParams = {
   zoom: string;
 };
 
-type ExploreProps = NextPage<{ params: ExploreParams, searchParams: ExploreSearchParams }>;
+type ExploreProps = NextPage<{ params: ExploreParams; searchParams: ExploreSearchParams }>;
 
 const Explore: ExploreProps = ({ params, searchParams }) => {
   const { locationId } = params;
@@ -26,11 +26,15 @@ const Explore: ExploreProps = ({ params, searchParams }) => {
       </div>
 
       <h1>Location {locationId}</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit. Blanditiis animi reprehenderit reiciendis voluptatem vero iure.</p>
-    
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+
       <Widget {...{ latitude: +latitude, longitude: +longitude }} />
     </div>
-  )
-}
+  );
+};
 
 export default Explore;
