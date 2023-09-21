@@ -1,24 +1,28 @@
 'use client';
 
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 import type { ViewState } from 'react-map-gl';
 import type { FC } from 'react';
 
-type WidgetProps = Pick<ViewState, 'longitude' | 'latitude'>;
-
-const Widget: FC<WidgetProps> = ({ latitude, longitude }) => {
+const Widget: FC = () => {
+  const searchParams = useSearchParams();
   const [count, setCount] = useState<number>(0);
+
+  const latitude: ViewState['latitude'] = +(searchParams.get('latitude') || 0);
+  const longitude: ViewState['longitude'] = +(searchParams.get('longitude') || 0);
 
   return (
     <div>
-      <h1>Widget</h1>
+      <h2>Widget</h2>
       <p>Your current location:</p>
-      <p>Longitude: {longitude}</p>
-      <p>Latitude: {latitude}</p>
-      <p>Count: {count}</p>
-      <button className="bg-white p-2" onClick={() => setCount(count + 1)}>
-        More
+      <ul>
+        <li>Longitude: {longitude}</li>
+        <li>Latitude: {latitude}</li>
+      </ul>
+      <button className="bg-white px-4 py-2" onClick={() => setCount(count + 1)}>
+        {count} clicks
       </button>
     </div>
   );

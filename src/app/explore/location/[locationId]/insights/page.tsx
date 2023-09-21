@@ -1,18 +1,27 @@
 import Link from 'next/link';
 
+import Widget from '@/components/widget';
+
 import type { NextPage } from 'next';
 
-type ExploreParams = {
+type InsightsPageParams = {
   locationId: string;
 };
 
-type ExploreProps = NextPage<{ params: ExploreParams }>;
+type InsightsPageSearchParams = {
+  longitude: string;
+  latitude: string;
+  zoom: string;
+};
 
-const Explore: ExploreProps = ({ params }) => {
+const InsightsPage: NextPage<{
+  params: InsightsPageParams;
+  searchParams: InsightsPageSearchParams;
+}> = ({ params, searchParams }) => {
   const { locationId } = params;
 
   return (
-    <div className="p-4 prose">
+    <div className="p-4">
       <div>
         <Link href="/explore">Back</Link>
       </div>
@@ -23,7 +32,6 @@ const Explore: ExploreProps = ({ params }) => {
         explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
         Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
       </p>
-
       <div>
         <div>
           <Link href={`/explore/location/${locationId}/datasets`}>Datasets</Link>
@@ -32,8 +40,18 @@ const Explore: ExploreProps = ({ params }) => {
           <Link href={`/explore/location/${locationId}/insights`}>Insights</Link>
         </div>
       </div>
+      <div>
+        <h2>Insights</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non iste reiciendis sequi quas
+          numquam illum sit. Quia, totam quas voluptate error dolor fugit aperiam eaque dignissimos
+          quos incidunt possimus sit.
+        </p>
+      </div>
+
+      <Widget />
     </div>
   );
 };
 
-export default Explore;
+export default InsightsPage;

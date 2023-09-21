@@ -1,7 +1,8 @@
-import { FC } from 'react';
 import Link from 'next/link';
 
-const Explore: FC = () => {
+import type { NextPage } from 'next';
+
+const Explore: NextPage = () => {
   return (
     <div className="p-4 prose">
       <h1>Explore</h1>
