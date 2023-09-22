@@ -1,3 +1,4 @@
+import InfoModal from '@/components/info';
 import Widget from '@/components/widget';
 import { FC, PropsWithChildren } from 'react';
 

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import Widget from '@/components/widget';
+import TabsNav from '@/components/tabs-nav';
 
 import type { NextPage } from 'next';
 
@@ -8,16 +9,9 @@ type DatasetsPageParams = {
   locationId: string;
 };
 
-type DatasetsPageSearchParams = {
-  longitude: string;
-  latitude: string;
-  zoom: string;
-};
-
 const DatasetsPage: NextPage<{
   params: DatasetsPageParams;
-  searchParams: DatasetsPageSearchParams;
-}> = ({ params, searchParams }) => {
+}> = ({ params }) => {
   const { locationId } = params;
 
   return (
@@ -32,14 +26,7 @@ const DatasetsPage: NextPage<{
         maiores inventore laborum, officia similique quaerat tempore dolore facere ex quod sed
         assumenda dolorum minus placeat.
       </p>
-      <div>
-        <div>
-          <Link href={`/explore/location/${locationId}/datasets`}>Datasets</Link>
-        </div>
-        <div>
-          <Link href={`/explore/location/${locationId}/insights`}>Insights</Link>
-        </div>
-      </div>
+      <TabsNav />
       <div>
         <h2>Datasets</h2>
         <p>
