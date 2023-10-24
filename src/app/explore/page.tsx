@@ -19,6 +19,26 @@ const Explore: FC = () => {
           <Link href="/explore/location/2">Location 2</Link>
         </li>
       </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
     </div>
   );
 };

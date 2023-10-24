@@ -33,6 +33,20 @@ const Explore: ExploreProps = ({ params, searchParams }) => {
       </p>
 
       <Widget {...{ latitude: +latitude, longitude: +longitude }} />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod voluptatum, dolorum possimus
+        explicabo voluptate a impedit, tenetur tempore eligendi voluptas commodi ullam velit.
+        Blanditiis animi reprehenderit reiciendis voluptatem vero iure.
+      </p>
+
+      <Link href="/explore">Back</Link>
     </div>
   );
 };
